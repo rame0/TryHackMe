@@ -1,0 +1,49 @@
+# Nmap 7.80 scan initiated Sat Dec 11 17:28:24 2021 as: nmap -Pn -sC -sV -oN nmap/initial 10.10.116.71
+Nmap scan report for 10.10.116.71
+Host is up (0.062s latency).
+Not shown: 996 filtered ports
+PORT     STATE SERVICE       VERSION
+22/tcp   open  ssh           OpenSSH for_Windows_7.7 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 2b:c5:31:04:b7:92:68:57:ac:3b:92:18:42:7b:c9:01 (RSA)
+|   256 6c:ad:62:67:ad:1b:24:5d:d5:75:e1:07:1a:9a:69:29 (ECDSA)
+|_  256 19:2f:29:26:a3:fb:37:21:4a:7b:7a:7b:de:e0:4f:12 (ED25519)
+135/tcp  open  msrpc         Microsoft Windows RPC
+1433/tcp open  ms-sql-s      Microsoft SQL Server  15.00.2000.00
+| ms-sql-ntlm-info: 
+|   Target_Name: AOC2021-MSSQL
+|   NetBIOS_Domain_Name: AOC2021-MSSQL
+|   NetBIOS_Computer_Name: AOC2021-MSSQL
+|   DNS_Domain_Name: AOC2021-MSSQL
+|   DNS_Computer_Name: AOC2021-MSSQL
+|_  Product_Version: 10.0.17763
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Not valid before: 2021-12-11T14:25:47
+|_Not valid after:  2051-12-11T14:25:47
+|_ssl-date: 2021-12-11T14:28:47+00:00; +1s from scanner time.
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: AOC2021-MSSQL
+|   NetBIOS_Domain_Name: AOC2021-MSSQL
+|   NetBIOS_Computer_Name: AOC2021-MSSQL
+|   DNS_Domain_Name: AOC2021-MSSQL
+|   DNS_Computer_Name: AOC2021-MSSQL
+|   Product_Version: 10.0.17763
+|_  System_Time: 2021-12-11T14:28:41+00:00
+| ssl-cert: Subject: commonName=AOC2021-MSSQL
+| Not valid before: 2021-10-31T21:09:16
+|_Not valid after:  2022-05-02T21:09:16
+|_ssl-date: 2021-12-11T14:28:47+00:00; +1s from scanner time.
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| ms-sql-info: 
+|   10.10.116.71:1433: 
+|     Version: 
+|       name: Microsoft SQL Server 
+|       number: 15.00.2000.00
+|       Product: Microsoft SQL Server 
+|_    TCP port: 1433
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Dec 11 17:28:47 2021 -- 1 IP address (1 host up) scanned in 23.15 seconds
